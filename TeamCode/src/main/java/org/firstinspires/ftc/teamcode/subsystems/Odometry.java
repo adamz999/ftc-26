@@ -10,23 +10,17 @@ import org.firstinspires.ftc.teamcode.roadrunner.TwoDeadWheelLocalizer;
 
 public class Odometry extends Subsystem {
 
-    private final TwoDeadWheelLocalizer twoDeadWheelLocalizer;
+    private TwoDeadWheelLocalizer twoDeadWheelLocalizer;
     private PoseVelocity2d velocity;
-
-    public Odometry(HardwareMap hardwareMap, double inPerTick, Pose2d initialPose) {
-        super(hardwareMap);
-
-        twoDeadWheelLocalizer = new TwoDeadWheelLocalizer(
-                hardwareMap,
-                hardwareMap.get(IMU.class, "imu"),
-                inPerTick,
-                initialPose
-        );
-    }
 
     @Override
     public void init() {
-
+        twoDeadWheelLocalizer = new TwoDeadWheelLocalizer(
+                hardwareMap,
+                hardwareMap.get(IMU.class, "imu"),
+                0,
+                getPose()
+        );
     }
 
     @Override

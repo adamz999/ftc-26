@@ -1,8 +1,8 @@
 package org.firstinspires.ftc.teamcode;
 
-import org.firstinspires.ftc.robotcore.external.navigation.Pose2D;
-import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
-import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
+import com.acmerobotics.roadrunner.Pose2d;
+import com.acmerobotics.roadrunner.Vector2d;
+
 
 public class Constants {
 
@@ -18,17 +18,22 @@ public class Constants {
     }
 
     public static class Hardware {
+        public static final String FRONT_LEFT = "frontLeftMotor";
+        public static final String BACK_LEFT = "backLeftMotor";
+        public static final String FRONT_RIGHT = "frontRightMotor";
+        public static final String BACK_RIGHT = "backRightMotor";
 
+        public static final String IMU = "imu";
     }
 
     public static class Field {
-        public static final Pose2D RED_HIVE_1 = new Pose2D(DistanceUnit.INCH, 0, 0, AngleUnit.DEGREES, 0);
+        public static final Pose2d RED_HIVE_1 = new Pose2d(new Vector2d(0, 0), 0);
 
-        public static final Pose2D RED_HIVE_2 = new Pose2D(DistanceUnit.INCH, 0, 0, AngleUnit.DEGREES, 0);
+        public static final Pose2d RED_HIVE_2 = new Pose2d(new Vector2d(0, 0), 0);
 
-        public static final Pose2D BLUE_HIVE_1 = new Pose2D(DistanceUnit.INCH, 0, 0, AngleUnit.DEGREES, 0);
+        public static final Pose2d BLUE_HIVE_1 = new Pose2d(new Vector2d(0, 0), 0);
 
-        public static final Pose2D BLUE_HIVE_2 = new Pose2D(DistanceUnit.INCH, 0, 0, AngleUnit.DEGREES, 0);
+        public static final Pose2d BLUE_HIVE_2 = new Pose2d(new Vector2d(0, 0), 0);
     }
 
 
