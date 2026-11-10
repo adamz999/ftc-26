@@ -13,6 +13,8 @@ public abstract class Robot extends LinearOpMode {
     private final ElapsedTime runtime = new ElapsedTime();
     public final List<Subsystem> subsystems = new ArrayList<>();
     public boolean autoPeriodic = false;
+    public boolean autoInit = true;
+    public boolean autoStop = true;
 
     public abstract void initialize();
 
@@ -25,8 +27,10 @@ public abstract class Robot extends LinearOpMode {
         HARDWARE_MAP = this.hardwareMap;
         initialize();
 
-        for (Subsystem sub : subsystems) {
-            sub.init();
+        if(autoInit){
+            for (Subsystem sub : subsystems) {
+                sub.init();
+            }
         }
 
         runtime.reset();
@@ -43,9 +47,12 @@ public abstract class Robot extends LinearOpMode {
 
         onStop();
 
-        for (Subsystem sub : subsystems) {
-            sub.stop();
+        if(autoStop){
+            for (Subsystem sub : subsystems) {
+                sub.stop();
+            }
         }
+
     }
 
     public double getElapsedTime(){

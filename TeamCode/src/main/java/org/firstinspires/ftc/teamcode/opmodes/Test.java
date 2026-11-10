@@ -23,7 +23,9 @@ public class Test extends Robot {
     @Override
     public void initialize(){
         odometry.setPose(initialPose);
+
         subsystems.add(odometry);
+        subsystems.add(drivetrain);
     }
 
     @Override
