@@ -1,10 +1,11 @@
+/*
 package org.firstinspires.ftc.teamcode.subsystems;
 
 import com.qualcomm.hardware.rev.RevHubOrientationOnRobot;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.IMU;
 import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
-import org.firstinspires.ftc.teamcode.Constants;
+import org.firstinspires.ftc.teamcode.RobotConfig;
 import org.firstinspires.ftc.teamcode.base.Subsystem;
 
 public class Drivetrain extends Subsystem {
@@ -14,12 +15,12 @@ public class Drivetrain extends Subsystem {
 
     @Override
     public void init() {
-        frontLeft = hardwareMap.get(DcMotor.class, Constants.Hardware.FRONT_LEFT);
-        backLeft = hardwareMap.get(DcMotor.class, Constants.Hardware.BACK_LEFT);
-        frontRight = hardwareMap.get(DcMotor.class, Constants.Hardware.FRONT_RIGHT);
-        backRight = hardwareMap.get(DcMotor.class, Constants.Hardware.BACK_RIGHT);
+        frontLeft = hardwareMap.get(DcMotor.class, RobotConfig.Hardware.FRONT_LEFT);
+        backLeft = hardwareMap.get(DcMotor.class, RobotConfig.Hardware.BACK_LEFT);
+        frontRight = hardwareMap.get(DcMotor.class, RobotConfig.Hardware.FRONT_RIGHT);
+        backRight = hardwareMap.get(DcMotor.class, RobotConfig.Hardware.BACK_RIGHT);
 
-        imu = hardwareMap.get(IMU.class, Constants.Hardware.IMU);
+        imu = hardwareMap.get(IMU.class, RobotConfig.Hardware.IMU);
 
         RevHubOrientationOnRobot.LogoFacingDirection logoFacingDirection = RevHubOrientationOnRobot.LogoFacingDirection.FORWARD;
         RevHubOrientationOnRobot.UsbFacingDirection usbFacingDirection = RevHubOrientationOnRobot.UsbFacingDirection.UP;
@@ -69,3 +70,4 @@ public class Drivetrain extends Subsystem {
 
     }
 }
+ */

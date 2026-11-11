@@ -1,10 +1,9 @@
 package org.firstinspires.ftc.teamcode;
 
-import com.acmerobotics.roadrunner.Pose2d;
-import com.acmerobotics.roadrunner.Vector2d;
 
+public class RobotConfig {
 
-public class Constants {
+    // seperate file
 
     public static class Shooter {
         public static final double FLYWHEEL_RADIUS_INCHES = 1;
@@ -42,13 +41,13 @@ public class Constants {
     }
 
     public static class Field {
-        public static final Pose2d RED_HIVE_1 = new Pose2d(new Vector2d(0, 0), 0);
-
-        public static final Pose2d RED_HIVE_2 = new Pose2d(new Vector2d(0, 0), 0);
-
-        public static final Pose2d BLUE_HIVE_1 = new Pose2d(new Vector2d(0, 0), 0);
-
-        public static final Pose2d BLUE_HIVE_2 = new Pose2d(new Vector2d(0, 0), 0);
+//        public static final Pose2d RED_HIVE_1 = new Pose2d(new Vector2d(0, 0), 0);
+//
+//        public static final Pose2d RED_HIVE_2 = new Pose2d(new Vector2d(0, 0), 0);
+//
+//        public static final Pose2d BLUE_HIVE_1 = new Pose2d(new Vector2d(0, 0), 0);
+//
+//        public static final Pose2d BLUE_HIVE_2 = new Pose2d(new Vector2d(0, 0), 0);
     }
 
 
