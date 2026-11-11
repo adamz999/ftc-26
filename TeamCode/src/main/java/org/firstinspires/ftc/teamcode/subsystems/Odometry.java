@@ -1,18 +1,16 @@
 package org.firstinspires.ftc.teamcode.subsystems;
 
-import com.acmerobotics.roadrunner.Pose2d;
-import com.acmerobotics.roadrunner.PoseVelocity2d;
-import com.qualcomm.robotcore.hardware.HardwareMap;
-import com.qualcomm.robotcore.hardware.IMU;
 
+import com.pedropathing.math.Pose;
+import com.qualcomm.robotcore.hardware.IMU;
 import org.firstinspires.ftc.teamcode.Constants;
 import org.firstinspires.ftc.teamcode.base.Subsystem;
-import org.firstinspires.ftc.teamcode.roadrunner.TwoDeadWheelLocalizer;
+
 
 public class Odometry extends Subsystem {
 
     private TwoDeadWheelLocalizer twoDeadWheelLocalizer;
-    private PoseVelocity2d velocity;
+    private Pose velocity;
 
     @Override
     public void init() {
