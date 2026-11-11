@@ -6,12 +6,27 @@ import com.acmerobotics.roadrunner.Vector2d;
 
 public class Constants {
 
+    public static class Shooter {
+        public static final double FLYWHEEL_RADIUS_INCHES = 1;
+        public static final double MAX_ANGLE = 0;
+        public static final double MIN_ANGLE = 0;
+
+    }
+
+    public static final class Odometry {
+        public static final double IN_PER_TICK = 0;
+
+        // y position of the parallel encoder (in tick units)
+        public static final double PAR_Y_TICKS = 0;
+
+        // x position of the perpendicular encoder (in tick units)
+        public static final double PERP_X_TICKS = 0;
+    }
+
     public enum Alliance {
         BLUE,
         RED
     }
-
-
 
     public static class Game {
         public static final Alliance ALLIANCE = Alliance.BLUE;

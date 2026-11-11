@@ -5,6 +5,7 @@ import com.acmerobotics.roadrunner.PoseVelocity2d;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.IMU;
 
+import org.firstinspires.ftc.teamcode.Constants;
 import org.firstinspires.ftc.teamcode.base.Subsystem;
 import org.firstinspires.ftc.teamcode.roadrunner.TwoDeadWheelLocalizer;
 
@@ -18,7 +19,7 @@ public class Odometry extends Subsystem {
         twoDeadWheelLocalizer = new TwoDeadWheelLocalizer(
                 hardwareMap,
                 hardwareMap.get(IMU.class, "imu"),
-                0,
+                Constants.Odometry.IN_PER_TICK,
                 getPose()
         );
     }
